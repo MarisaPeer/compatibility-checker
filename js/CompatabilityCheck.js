@@ -12,16 +12,16 @@ if(PluginDetect.browser.isChrome == 1){
 	}
 
 	else if (PluginDetect.browser.isGecko == 1){
-	document.write("Firefox" + " " + PluginDetect.browser.verGecko + "</td><td class= 'alert alert-warning'></td>");
+	document.write("Firefox web-browser" + ".<br><b>Tip</b>: download and install Google Chrome (<a href='https://www.google.co.uk/chrome' target='_blank'>available here</a>).</td><td class= 'alert alert-warning'></td>");
 		}
 	else if (PluginDetect.browser.isIE == 1){
-	document.write("Internet Explorer" + " " + PluginDetect.browser.verChrome + "</td><td class= 'alert alert-warning'></td>");
+	document.write("Internet Explorer web-browser" + ".<br><b>Tip</b>: download and install Google Chrome (<a href='https://www.google.co.uk/chrome' target='_blank'>available here</a>).</td><td class= 'alert alert-warning'></td>");
 		}
 	else if (PluginDetect.browser.isSafari == 1){
-	document.write("Safari" + " " + PluginDetect.browser.verSafari + "</td><td class= 'alert alert-warning'></td>");
+	document.write("Safari web-browser" + ".<br><b>Tip</b>: download and install Google Chrome (<a href='https://www.google.co.uk/chrome' target='_blank'>available here</a>).</td><td class= 'alert alert-warning'></td>");
 		}
 	else 
-	document.write ("Unidentified browser" + "</td><td class='warning'></td>");
+	document.write ("Unidentified web-browser" + ".<br><b>Tip</b>: download and install Google Chrome (<a href='https://www.google.co.uk/chrome' target='_blank'>available here</a>).</td><td class='warning'></td>");
 	
 }
 
@@ -82,11 +82,11 @@ function checkShock()
 function checkPopup(){
  var mine = window.open('','','width=1,height=1,left=0,top=0,scrollbars=no');
  if(mine){
-    document.write("Popups not blocked</td><td class= 'alert alert-success'></td>");
+    document.write("Pop-ups are not blocked.</td><td class= 'alert alert-success'></td>");
 		}
  else
  	{
-    document.write("Popups are blocked</td><td class= 'alert alert-warning'></td>");
+    document.write("Pop-ups are blocked.<br><b>Tip</b>: go to your browser settings and allow pop-ups.</td><td class= 'alert alert-warning'></td>");
 }
  mine.close();
 }
@@ -96,11 +96,11 @@ function checkCookies()
 {
 var tmpcookie = new Date();   chkcookie = (tmpcookie.getTime() + '');   document.cookie = "chkcookie=" + chkcookie + "; path=/";
   if (document.cookie.indexOf(chkcookie,0) < 0) {
-     document.write ("Cookies Not Enabled</td><td class= 'alert alert-danger'></td>");
+     document.write ("Cookies are not enabled.<br><b>Tip</b>: go to your browser settings and enable cookies.</td><td class= 'alert alert-danger'></td>");
 	     }    
 else
 		  {
-document.write ("Cookies Enabled</td><td class= 'alert alert-success'></td>");
+document.write ("Cookies are enabled</td><td class= 'alert alert-success'></td>");
 		    }
 }
 
@@ -108,8 +108,8 @@ function checkRes()
 {
 if (screen.width >=ScreenWidth && screen.height >=ScreenHeight)
 {
-	document.write('Resolution ' + screen.width + 'x'+ screen.height + "</td><td class= 'alert alert-success'></td>");
+	document.write('Resolution ' + screen.width + 'x'+ screen.height + ".</td><td class= 'alert alert-success'></td>");
 }
 else
-	document.write('Resolution (' + screen.width + 'x'+ screen.height + ")</td><td class= 'alert alert-warning'></td>");
+	document.write('Resolution (' + screen.width + 'x'+ screen.height + ").</td><td class= 'alert alert-warning'></td>");
 }
